@@ -73,24 +73,23 @@
         color: white;
         margin: 0;
       }
+
       .top-nav {
-        width: 1, 176px;
-        height: 293px;
-        top: 16px;
-        left: 237px;
-        border: 0px, 0px, 1px, 0px;
-        gap: 21px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
       }
+
       .top-bar {
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
       }
 
       .user-info {
         display: flex;
-
         align-items: center;
       }
       .flex-column {
@@ -303,7 +302,7 @@
         background: linear-gradient(180deg, #333d51 0%, #000e26 100%);
         margin-top: 20px;
         text-decoration: none;
-        cursor: pointer; /* Add cursor property here */
+        cursor: pointer;
       }
 
       .breadcrumb {
@@ -342,16 +341,16 @@
         }
 
         .top-nav {
-          width: 100%; /* Adjusted for full width */
-          height: auto; /* Adjusted for dynamic height */
-          top: 0; /* Adjusted for top position */
-          left: 0; /* Adjusted for left position */
-          border: 0; /* Removed border */
-          gap: 10px; /* Adjusted gap */
+          width: 100%;
+          height: auto;
+          top: 0;
+          left: 0;
+          border: 0;
+          gap: 10px;
         }
 
         .top-bar {
-          padding: 10px; /* Adjusted padding */
+          padding: 10px;
         }
 
         .user-img {
@@ -406,15 +405,15 @@
         .flex-row p {
           font-size: 8px;
           margin-top: -40px;
-          margin-left: -90px; /* Adjusted margin-top for smaller screens */
+          margin-left: -90px;
         }
 
         .user-text .flex-row {
-          margin-top: -50px; /* Adjusted margin-top */
+          margin-top: -50px;
         }
 
         .username {
-          font-size: 10px; /* Adjusted font size */
+          font-size: 10px;
         }
 
         .search-bar {
@@ -431,8 +430,8 @@
 
         .search-bar input {
           position: absolute;
-          width: 220%; /* Adjusted width for full width of the parent */
-          height: 100%; /* Adjusted height for full height of the parent */
+          width: 220%;
+          height: 100%;
           border: 1px solid var(--brand-gradient-gold, #ccb04c);
           border-radius: 20px;
           background: #000816;
@@ -445,27 +444,27 @@
         }
 
         .nav-bar {
-          padding: -15px; /* Adjusted padding */
+          padding: -15px;
           margin-top: 50px;
         }
 
         .nav-bar-links {
           margin-top: 20px;
-          height: auto; /* Adjusted height for dynamic height */
-          flex-wrap: wrap; /* Allow flex items to wrap to the next line */
-          justify-content: flex-start; /* Align items to the start */
-          gap: 10px; /* Adjusted gap between items */
+          height: auto;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 10px;
         }
 
         .nav-bar-links .button-style {
-          width: 90%; /* Adjusted width for full width */
+          width: 90%;
           height: 35px;
-          margin-top: 10px; /* Adjusted margin-top */
+          margin-top: 10px;
         }
 
         .breadcrumb {
-          margin-top: 20px; /* Adjusted margin-top for smaller screens */
-          margin-left: 15px; /* Adjusted margin-left for smaller screens */
+          margin-top: 20px;
+          margin-left: 15px;
         }
 
         .notif,
@@ -506,7 +505,7 @@
           transform: scale(1.6);
           margin-top: 2px;
           margin-left: 170px;
-          width: 100px; /* Adjusted width for full width */
+          width: 100px;
         }
 
         .top-nav-user-button {
@@ -551,7 +550,7 @@
 
         .search-bar {
           position: relative;
-          width: 200px;
+          width: 150px;
           height: 60px;
           margin-left: 90px;
           top: 80px;
@@ -563,8 +562,8 @@
 
         .search-bar input {
           position: absolute;
-          width: 220%; /* Adjusted width for full width of the parent */
-          height: 100%; /* Adjusted height for full height of the parent */
+          width: 220%;
+          height: 100%;
           border: 1px solid var(--brand-gradient-gold, #ccb04c);
           border-radius: 20px;
           background: #000816;
@@ -572,11 +571,11 @@
 
         .search-btn img {
           width: 20px;
-          margin-left: 360px;
+          margin-left: 280px;
           margin-top: -10px;
         }
         .nav-bar {
-          padding: -15px; /* Adjusted padding */
+          padding: -15px;
           margin-top: 50px;
         }
 
@@ -589,9 +588,11 @@
         }
 
         .nav-bar-links .button-style {
-          width: 12%; /* Adjusted width for full width */
-          height: 35px;
-          margin-top: 10px; /* Adjusted margin-top */
+          width: 5%;
+          height: 25px;
+          margin-top: 10px;
+          font-size: 9px;
+          padding: 2px 10px;
         }
 
         .notif,
@@ -631,7 +632,7 @@
           transform: scale(1.6);
           margin-top: 2px;
           margin-left: 170px;
-          width: 100px; /* Adjusted width for full width */
+          width: 100px;
         }
 
         .top-nav-user-button {
@@ -663,15 +664,15 @@
         .flex-row p {
           font-size: 8px;
           margin-top: 30px;
-          margin-left: -90px; /* Adjusted margin-top for smaller screens */
+          margin-left: -90px;
         }
 
         .user-text .flex-row {
-          margin-top: -25px; /* Adjusted margin-top */
+          margin-top: -25px;
         }
 
         .username {
-          font-size: 10px; /* Adjusted font size */
+          font-size: 10px;
         }
 
         .search-bar {
@@ -688,8 +689,8 @@
 
         .search-bar input {
           position: absolute;
-          width: 220%; /* Adjusted width for full width of the parent */
-          height: 100%; /* Adjusted height for full height of the parent */
+          width: 220%;
+          height: 100%;
           border: 1px solid var(--brand-gradient-gold, #ccb04c);
           border-radius: 20px;
           background: #000816;
@@ -701,7 +702,7 @@
           margin-top: -10px;
         }
         .nav-bar {
-          padding: -15px; /* Adjusted padding */
+          padding: -15px;
           margin-top: 50px;
         }
 
@@ -714,9 +715,9 @@
         }
 
         .nav-bar-links .button-style {
-          width: 6%; /* Adjusted width for full width */
+          width: 6%;
           height: 35px;
-          margin-top: 10px; /* Adjusted margin-top */
+          margin-top: 10px;
         }
 
         .notif,
