@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Navigation Bar</title>
+  </head>
+  <body>
+    <div class="top-nav">
+      <div class="top-bar">
+        <div class="user-info">
+          <div class="user-img">
+            <img src="Message Icon.png" />
+          </div>
+          <div class="flex-column">
+            <div class="flex-row">
+              <a class="top-nav-user-button button-style">Sign Out</a>
+              <a class="top-nav-user-button button-style">Subscribe</a>
+            </div>
+
+            <div class="user-text flex-row">
+              <p>You are signed in as,</p>
+              <p class="flex-row username">[Name]</p>
+            </div>
+          </div>
+        </div>
+        <div class="center-logo">
+          <img src="Frame 51.png" alt="Center Logo" />
+
+          <div class="search-bar">
+            <input type="text" class="search-bar-box" />
+            <button class="search-btn">
+              <img src="Search.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="notifications">
+          <div class="notif">
+            <img src="message.png" alt="User Image" class="icon" />
+            <p class="notif-count">7</p>
+          </div>
+          <div class="notif-bell">
+            <img src="bellicon.png" alt="User Image" class="icon" />
+            <p class="notif-count">3</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar">
+        <div class="nav-bar-links">
+          <a href="#" class="button-style">American</a>
+          <a href="#" class="button-style">Asian</a>
+          <a href="#" class="button-style">Celtic</a>
+          <a href="#" class="button-style">Egyptian</a>
+          <a href="#" class="button-style">Germanic</a>
+          <a href="#" class="button-style">Greek</a>
+          <a href="#" class="button-style">Near Eastern</a>
+          <a href="#" class="button-style">Oceanic</a>
+          <a href="#" class="button-style">Prehistoric</a>
+          <a href="#" class="button-style">Roman</a>
+        </div>
+
+        <div class="nav-bar-crumb paddingtop1rem">
+          <div class="breadcrumb">Ancient Civs</div>
+        </div>
+      </div>
+    </div>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #000816;
+        color: white;
+        margin: 0;
+      }
+
+      .top-nav {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .top-bar {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+      }
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      .user-img {
+        margin-top: -80px;
+        width: 90px;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-left: 20px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 21px;
+      }
+      .center-logo {
+        display: flex;
+        height: 174px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative; /* Add this line */
+      }
+
+      .center-logo img {
+        margin-top: 5px;
+        gap: 4px;
+      }
+
+      .top-nav-user-button {
+        margin-top: 100px;
+        border-radius: 8px;
+        padding: 0 10px;
+        border: 1px solid #ffdc5f;
+        background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
+      }
+      .flex-row {
+        display: flex;
+        height: 35px;
+        padding: 4px 18px;
+        align-items: center;
+        margin-left: -10px;
+        gap: 10px;
+      }
+
+      .flex-row p {
+        display: flex;
+        height: 35px;
+        padding: 4px 18px;
+        align-items: center;
+        margin-top: -50px;
+        margin-left: -15px;
+        gap: 10px;
+      }
+
+      .user-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 60px;
+        margin-left: -118px;
+        color: var(--brand-brand-whiteyellow, #fffdf0);
+        font-family: Nunito Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .username {
+        color: #94e8ec;
+        font-family: Nunito Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .search-bar {
+        position: relative; /* Add this line */
+        width: 250%;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        border: 1px solid var(--brand-gradient-gold, #ccb04c);
+        margin-top: 20px;
+        margin-left: -90px;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+      }
+
+      .search-bar input {
+        width: 100%;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        border: 1px solid var(--brand-gradient-gold, #ccb04c);
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .search-bar-box {
+        background: #000816;
+      }
+
+      .search-btn {
+        position: absolute;
+        left: 0;
+        background: #000816;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 100%;
+        height: 17.85px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .search-btn img {
+        margin-left: 360px;
+      }
+
+      .notifications {
+        display: flex;
+        align-items: center;
+        margin-bottom: auto;
+      }
+
+      .notif,
+      .notif-bell {
+        display: flex;
+        margin-right: 0;
+        margin-left: 60px;
+      }
+
+      .icon {
+        height: 35px;
+        width: 35px;
+        padding: 5px;
+        border: 1px #d3ac2bc2 solid;
+        border-radius: 50%;
+      }
+
+      .notif-count {
+        background: var(--prusian-blue-Darker, #000816);
+        color: #94e8ec;
+        border: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        cursor: pointer;
+      }
+
+      .paddingtop1rem {
+        padding-top: 1rem;
+      }
+
+      .button-style {
+        color: #001840;
+        border-radius: 8px;
+        border: 1px solid #ffdc5f;
+        background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
+        padding: 5px 15px;
+        margin: 5px;
+        cursor: pointer;
+        align-content: center;
+        margin: auto;
+      }
+
+      .nav-bar {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        background: #000816;
+        margin-left: 0;
+      }
+
+      .nav-bar-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        margin-left: 0;
+      }
+
+      .nav-bar-links .button-style {
+        display: flex;
+        width: 100px;
+        height: 35px;
+        padding: 2px 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 0;
+        border-radius: 8px;
+        border: 1px solid #fffae7;
+        color: #cbd0d8;
+        background: linear-gradient(180deg, #333d51 0%, #000e26 100%);
+        margin-top: 20px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .breadcrumb {
+        color: var(--brand-brand-whiteyellow, #fffdf0);
+        font-family: "Nunito Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 100;
+        line-height: normal;
+        margin-top: 40px;
+        margin-left: 23px;
+      }
+
+      .breadcrumb::before {
+        content: "";
+      }
+
+      .breadcrumb::after {
+        content: ">";
+        color: var(--golden-yellow-Normal, #d3ac2b);
+        font-family: "Nunito Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: 10px;
+      }
+
+      @media only screen and (min-width: 430px) and (min-height: 932px) {
+        body {
+          height: 233px;
+          font-family: Arial, sans-serif;
+          background: #000816;
+          color: white;
+          margin: 0;
+        }
+
+        .top-nav {
+          width: 100%;
+          height: auto;
+          top: 0;
+          left: 0;
+          border: 0;
+          gap: 10px;
+        }
+
+        .top-bar {
+          padding: 10px;
+        }
+
+        .user-img {
+          margin-top: -10px;
+          transform: scale(0.6);
+          margin-left: -20px;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 21px;
+        }
+
+        .center-logo {
+          height: auto;
+          margin-left: 0;
+        }
+
+        .center-logo img {
+          position: absolute;
+          transform: scale(1);
+          margin-top: 2px;
+          margin-left: 130px;
+          width: 100px; /* Adjusted width for full width */
+        }
+
+        .top-nav-user-button {
+          position: relative;
+          display: flex;
+          width: 35px;
+          height: 9px;
+          padding: 5px 5px;
+          align-items: center;
+          font-size: 8px;
+          margin-top: 120px;
+          margin-left: -8px;
+          left: -170px;
+          gap: 10px;
+          border-radius: 8px;
+          border: 1px solid #ffdc5f;
+          background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
+        }
+        .flex-column {
+          display: flex;
+          position: absolute;
+          margin-left: 170px;
+        }
+
+        .flex-row user {
+          margin-top: 70px;
+        }
+
+        .flex-row p {
+          font-size: 8px;
+          margin-top: -40px;
+          margin-left: -90px;
+        }
+
+        .user-text .flex-row {
+          margin-top: -50px;
+        }
+
+        .username {
+          font-size: 10px;
+        }
+
+        .search-bar {
+          position: relative;
+          width: 100px;
+          height: 50px;
+          margin-left: 90px;
+          top: 50px;
+        }
+
+        .search-bar-box {
+          background: #000816;
+        }
+
+        .search-bar input {
+          position: absolute;
+          width: 220%;
+          height: 100%;
+          border: 1px solid var(--brand-gradient-gold, #ccb04c);
+          border-radius: 20px;
+          background: #000816;
+        }
+
+        .search-btn img {
+          width: 30px;
+          margin-left: 170px;
+          margin-top: -10px;
+        }
+
+        .nav-bar {
+          padding: -15px;
+          margin-top: 50px;
+        }
+
+        .nav-bar-links {
+          margin-top: 20px;
+          height: auto;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 10px;
+        }
+
+        .nav-bar-links .button-style {
+          width: 90%;
+          height: 35px;
+          margin-top: 10px;
+        }
+
+        .breadcrumb {
+          margin-top: 20px;
+          margin-left: 15px;
+        }
+
+        .notif,
+        .notif-bell {
+          transform: scale(0.7);
+          display: flex;
+          margin-right: -20px;
+          margin-left: 20px;
+        }
+      }
+
+      @media only screen and (min-width: 768px) and (min-height: 1024px) {
+        body {
+          height: 233px;
+          font-family: Arial, sans-serif;
+          background: #000816;
+          color: white;
+          margin: 0;
+        }
+
+        .user-img {
+          margin-top: 30px;
+          transform: scale(1.5);
+          margin-left: 30px;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 21px;
+        }
+
+        .center-logo {
+          height: auto;
+          margin-left: 0;
+        }
+
+        .center-logo img {
+          position: absolute;
+          transform: scale(1.6);
+          margin-top: 2px;
+          margin-left: 170px;
+          width: 100px;
+        }
+
+        .top-nav-user-button {
+          position: relative;
+          display: flex;
+          width: 50px;
+          height: 9px;
+          padding: 5px 10px;
+          align-items: center;
+          font-size: 12px;
+          margin-top: 160px;
+          margin-left: -6px;
+          left: -170px;
+          gap: 10px;
+          border-radius: 8px;
+          border: 1px solid #ffdc5f;
+          background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
+        }
+        .flex-column {
+          display: flex;
+          position: absolute;
+          margin-left: 190px;
+        }
+
+        .flex-row user {
+          margin-top: 70px;
+        }
+
+        .flex-row p {
+          font-size: 8px;
+          margin-top: 30px;
+          margin-left: -90px; /* Adjusted margin-top for smaller screens */
+        }
+
+        .user-text .flex-row {
+          margin-top: -25px; /* Adjusted margin-top */
+        }
+
+        .username {
+          font-size: 10px; /* Adjusted font size */
+        }
+
+        .search-bar {
+          position: relative;
+          width: 150px;
+          height: 60px;
+          margin-left: 90px;
+          top: 80px;
+        }
+
+        .search-bar-box {
+          background: #000816;
+        }
+
+        .search-bar input {
+          position: absolute;
+          width: 220%;
+          height: 100%;
+          border: 1px solid var(--brand-gradient-gold, #ccb04c);
+          border-radius: 20px;
+          background: #000816;
+        }
+
+        .search-btn img {
+          width: 20px;
+          margin-left: 280px;
+          margin-top: -10px;
+        }
+        .nav-bar {
+          padding: -15px;
+          margin-top: 50px;
+        }
+
+        .nav-bar-links {
+          margin-top: 20px;
+          height: auto;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 10px;
+        }
+
+        .nav-bar-links .button-style {
+          width: 5%;
+          height: 25px;
+          margin-top: 10px;
+          font-size: 9px;
+          padding: 2px 10px;
+        }
+
+        .notif,
+        .notif-bell {
+          transform: scale(1);
+          display: flex;
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+      }
+      @media only screen and (min-width: 1024px) and (min-height: 1366px) {
+        body {
+          height: 233px;
+          font-family: Arial, sans-serif;
+          background: #000816;
+          color: white;
+          margin: 0;
+        }
+
+        .user-img {
+          margin-top: 30px;
+          transform: scale(1.5);
+          margin-left: 30px;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 21px;
+        }
+
+        .center-logo {
+          height: auto;
+          margin-left: 0;
+        }
+
+        .center-logo img {
+          position: absolute;
+          transform: scale(1.6);
+          margin-top: 2px;
+          margin-left: 170px;
+          width: 100px;
+        }
+
+        .top-nav-user-button {
+          position: relative;
+          display: flex;
+          width: 50px;
+          height: 9px;
+          padding: 5px 10px;
+          align-items: center;
+          font-size: 12px;
+          margin-top: 160px;
+          margin-left: -6px;
+          left: -170px;
+          gap: 10px;
+          border-radius: 8px;
+          border: 1px solid #ffdc5f;
+          background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
+        }
+        .flex-column {
+          display: flex;
+          position: absolute;
+          margin-left: 190px;
+        }
+
+        .flex-row user {
+          margin-top: 70px;
+        }
+
+        .flex-row p {
+          font-size: 8px;
+          margin-top: 30px;
+          margin-left: -90px;
+        }
+
+        .user-text .flex-row {
+          margin-top: -25px;
+        }
+
+        .username {
+          font-size: 10px;
+        }
+
+        .search-bar {
+          position: relative;
+          width: 200px;
+          height: 60px;
+          margin-left: 90px;
+          top: 80px;
+        }
+
+        .search-bar-box {
+          background: #000816;
+        }
+
+        .search-bar input {
+          position: absolute;
+          width: 220%;
+          height: 100%;
+          border: 1px solid var(--brand-gradient-gold, #ccb04c);
+          border-radius: 20px;
+          background: #000816;
+        }
+
+        .search-btn img {
+          width: 20px;
+          margin-left: 360px;
+          margin-top: -10px;
+        }
+        .nav-bar {
+          padding: -15px;
+          margin-top: 50px;
+        }
+
+        .nav-bar-links {
+          margin-top: 20px;
+          height: auto;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 10px;
+        }
+
+        .nav-bar-links .button-style {
+          width: 6%;
+          height: 35px;
+          margin-top: 10px;
+        }
+
+        .notif,
+        .notif-bell {
+          transform: scale(1);
+          display: flex;
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+      }
+    </style>
+  </body>
+</html>
